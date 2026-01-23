@@ -41,7 +41,7 @@ Special attention is given to **location modeling (Paris arrondissements)** to e
 house_pricing_ml/
 │
 ├── data/
-│ ├── raw/ # Raw DVF files (2020–2025)
+│ ├── raw/ # Raw DVF files (2020–2025)      # Raw DVF files (not included – see Data section)
 │ ├── processed/ # Cleaned and model-ready datasets
 │
 ├── notebooks/
@@ -63,6 +63,48 @@ house_pricing_ml/
 ```
 
 ---
+## 📊 Data Source
+
+This project is based on **DVF – Demande de Valeurs Foncières**, the official French government database containing all real estate transactions recorded by notaries.
+
+The dataset provides detailed information on:
+- Transaction dates
+- Sale prices
+- Property types
+- Surface areas
+- Number of rooms
+- Geographic location (city, postal code, department)
+
+### Official source
+
+The data is published and maintained by the French government on the national open data portal:
+
+https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
+
+This source guarantees:
+- Reliability and accuracy
+- Real transaction data
+- Open and reusable data under public license
+
+---
+
+## ⚠️ Raw Data Availability
+
+Raw DVF files are **not included in this repository** due to GitHub’s file size limitations (individual files exceed 100 MB).
+
+### How to reproduce the project:
+
+1. Download DVF data from the official source above  
+2. Place the raw files in the following directory:
+```bash
+Data/raw/
+```
+3. Run the data processing and modeling pipeline:
+- `01_clean_data.py`
+- `02_feature_analysis.py`
+- `03_train_model.py`
+
+All processed datasets and models can be regenerated locally from the raw data.
 
 ## 📊 Data Description
 
