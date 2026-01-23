@@ -40,7 +40,7 @@ Special attention is given to **location modeling (Paris arrondissements)** to e
 ```text
 house_pricing_ml/
 │
-├── data/
+├── Data/
 │ ├── raw/ # Raw DVF files (2020–2025)      # Raw DVF files (not included – see Data section)
 │ ├── processed/ # Cleaned and model-ready datasets
 │
@@ -216,7 +216,7 @@ The app uses the **same preprocessing and model pipeline** as training.
 
 ```bash
 python -m venv venv
-venv\Scripts\activate   # Windows
+.\venv\Scripts\Activate.ps1   # PowerShell
 ```
 
 ### 2️⃣ Install dependencies
